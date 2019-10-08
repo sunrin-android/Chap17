@@ -45,14 +45,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         if (view == button1) {
             FragmentTransaction fragmentTransaction = manager.beginTransaction();
+            fragmentTransaction.addToBackStack(null);
             fragmentTransaction.replace(R.id.linearLayout, oneFragment);
             fragmentTransaction.commit();
         } else if (view == button2) {
             FragmentTransaction fragmentTransaction = manager.beginTransaction();
+            fragmentTransaction.addToBackStack(null);
             fragmentTransaction.replace(R.id.linearLayout, twoFragment);
             fragmentTransaction.commit();
         } else if (view == button3) {
-
+            threeFragment.show(manager, null);
         }
     }
 }
