@@ -1,2 +1,2 @@
-include ':app', ':myfragment', ':mypager'
+include ':app', ':myfragment', ':mypager', ':myrecycler'
 rootProject.name='Chap17'
