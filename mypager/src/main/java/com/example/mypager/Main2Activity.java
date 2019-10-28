@@ -5,6 +5,8 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 
+import com.google.android.material.tabs.TabLayout;
+
 public class Main2Activity extends AppCompatActivity {
 
     @Override
@@ -15,5 +17,8 @@ public class Main2Activity extends AppCompatActivity {
         ViewPager viewPager = findViewById(R.id.pager);
         MyPagerAdapter myPagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(myPagerAdapter);
+
+        TabLayout tabLayout = findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(viewPager);
     }
 }
