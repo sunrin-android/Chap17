@@ -41,7 +41,9 @@ public class ItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         Item item = list.get(position); // 1개 데이터
         if (item.getType() == Item.TYPE_HEADER) {
-
+            HeaderViewHolder headerViewHolder = (HeaderViewHolder)holder;
+            HeaderItem headerItem = (HeaderItem)item;
+            headerViewHolder.titleView.setText(headerItem.title);
         } else {
             MyViewHolder dataHolder = (MyViewHolder)holder;
             DataItem dataItem = (DataItem)item;
