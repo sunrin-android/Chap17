@@ -11,7 +11,7 @@ class HeaderItem extends Item {
     String title;
 
     @Override
-    int getType(){
+    int getType() {
         return Item.TYPE_HEADER;
     }
 }
@@ -20,7 +20,7 @@ class DataItem extends Item {
     String name, date;
 
     @Override
-    int getType(){
+    int getType() {
         return Item.TYPE_DATA;
     }
 }
